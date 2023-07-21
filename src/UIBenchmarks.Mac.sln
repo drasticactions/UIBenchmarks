@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UIBenchmarks", "UIBenchmarks\UIBenchmarks.csproj", "{75BA0A2F-243F-4B63-8F08-6EF1E8675634}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UIBenchmarks.AppleUIKit", "UIBenchmarks.AppleUIKit\UIBenchmarks.AppleUIKit.csproj", "{529DDBFA-2FCD-4698-AC0F-E40417B7F672}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UIBenchmarks.iOS", "UIBenchmarks.iOS\UIBenchmarks.iOS.csproj", "{6E551873-DD7D-417F-AF2A-09D773ABC9FA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UIBenchmarks.MacCatalyst", "UIBenchmarks.MacCatalyst\UIBenchmarks.MacCatalyst.csproj", "{4F5A1E13-40F7-4E42-A12F-2B95DCFA509E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UIBenchmarks.tvOS", "UIBenchmarks.tvOS\UIBenchmarks.tvOS.csproj", "{03BD1412-BDC6-42A2-91F4-D5E65226E320}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{45DB5B74-346A-4B5B-A5BE-A951D329C830}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75BA0A2F-243F-4B63-8F08-6EF1E8675634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75BA0A2F-243F-4B63-8F08-6EF1E8675634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75BA0A2F-243F-4B63-8F08-6EF1E8675634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75BA0A2F-243F-4B63-8F08-6EF1E8675634}.Release|Any CPU.Build.0 = Release|Any CPU
+		{529DDBFA-2FCD-4698-AC0F-E40417B7F672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{529DDBFA-2FCD-4698-AC0F-E40417B7F672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{529DDBFA-2FCD-4698-AC0F-E40417B7F672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{529DDBFA-2FCD-4698-AC0F-E40417B7F672}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E551873-DD7D-417F-AF2A-09D773ABC9FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E551873-DD7D-417F-AF2A-09D773ABC9FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E551873-DD7D-417F-AF2A-09D773ABC9FA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6E551873-DD7D-417F-AF2A-09D773ABC9FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E551873-DD7D-417F-AF2A-09D773ABC9FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E551873-DD7D-417F-AF2A-09D773ABC9FA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4F5A1E13-40F7-4E42-A12F-2B95DCFA509E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F5A1E13-40F7-4E42-A12F-2B95DCFA509E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F5A1E13-40F7-4E42-A12F-2B95DCFA509E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4F5A1E13-40F7-4E42-A12F-2B95DCFA509E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F5A1E13-40F7-4E42-A12F-2B95DCFA509E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F5A1E13-40F7-4E42-A12F-2B95DCFA509E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{03BD1412-BDC6-42A2-91F4-D5E65226E320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03BD1412-BDC6-42A2-91F4-D5E65226E320}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03BD1412-BDC6-42A2-91F4-D5E65226E320}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03BD1412-BDC6-42A2-91F4-D5E65226E320}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6E551873-DD7D-417F-AF2A-09D773ABC9FA} = {45DB5B74-346A-4B5B-A5BE-A951D329C830}
+		{4F5A1E13-40F7-4E42-A12F-2B95DCFA509E} = {45DB5B74-346A-4B5B-A5BE-A951D329C830}
+		{03BD1412-BDC6-42A2-91F4-D5E65226E320} = {45DB5B74-346A-4B5B-A5BE-A951D329C830}
+	EndGlobalSection
+EndGlobal

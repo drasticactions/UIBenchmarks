@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "UIBenchmarks.WinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "UIBenchmarks.WinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
