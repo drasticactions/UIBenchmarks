@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UIBenchmarks.MauiUI.ListIncreaseBoxSizePage"
+             Title="ListIncreaseBoxSizePage">
+    <ListView x:Name="TestListView" HasUnevenRows="True" ItemsSource="{Binding Boxes}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Border HeightRequest="{Binding Height}" Stroke="{AppThemeBinding Light=Black, Dark=White}"
+                                StrokeThickness="1"
+                                StrokeShape="RoundRectangle 5">
+                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding Height}"/>
+                    </Border>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

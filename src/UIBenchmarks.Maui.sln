@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UIBenchmarks", "UIBenchmark
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UIBenchmarks.AppMaui", "UIBenchmarks.AppMaui\UIBenchmarks.AppMaui.csproj", "{22570C37-774B-4C4B-822D-AE3506DB16B6}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UIBenchmarks.MauiUI", "UIBenchmarks.MauiUI\UIBenchmarks.MauiUI.csproj", "{50E6DA4A-F2AD-425D-B5D8-7DDA02264EA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{22570C37-774B-4C4B-822D-AE3506DB16B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22570C37-774B-4C4B-822D-AE3506DB16B6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{22570C37-774B-4C4B-822D-AE3506DB16B6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{50E6DA4A-F2AD-425D-B5D8-7DDA02264EA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50E6DA4A-F2AD-425D-B5D8-7DDA02264EA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50E6DA4A-F2AD-425D-B5D8-7DDA02264EA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50E6DA4A-F2AD-425D-B5D8-7DDA02264EA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

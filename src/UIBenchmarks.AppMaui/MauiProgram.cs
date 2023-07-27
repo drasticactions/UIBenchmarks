@@ -11,11 +11,16 @@ public static class MauiProgram
 	{
 		var builder = MauiApp.CreateBuilder();
 
+		var mauiAppDispatcher = new MauiAppDispatcher();
+		var basicErrorHandler = new BasicErrorHandler();
+
 		builder.
 			Services.
-			AddSingleton<IAppDispatcher, MauiAppDispatcher>().
-			AddSingleton<IErrorHandlerService, BasicErrorHandler>()
+			AddSingleton<IAppDispatcher>(mauiAppDispatcher).
+			AddSingleton<IErrorHandlerService>(basicErrorHandler)
 			;
+
+		ServiceInitialize.Setup(mauiAppDispatcher, basicErrorHandler);
 
 		builder
 			.UseMauiApp<App>()

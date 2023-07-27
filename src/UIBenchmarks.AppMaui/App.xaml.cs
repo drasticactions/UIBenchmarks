@@ -1,4 +1,6 @@
-﻿namespace UIBenchmarks.AppMaui;
+﻿using UIBenchmarks.MauiUI;
+
+namespace UIBenchmarks.AppMaui;
 
 public partial class App : Application
 {
@@ -6,6 +8,6 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new MainPage(provider);
+		MainPage = new CollectionIncreaseBoxSizePage();
 	}
 }

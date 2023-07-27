@@ -57,6 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\UIBenchmarks.MauiUI\UIBenchmarks.MauiUI.csproj" />
 	  <ProjectReference Include="..\UIBenchmarks\UIBenchmarks.csproj" />
 	</ItemGroup>
 

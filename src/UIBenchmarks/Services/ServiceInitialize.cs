@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UIBenchmarks.ViewModels;
 
 namespace UIBenchmarks.Services;
 
@@ -17,6 +18,8 @@ public static class ServiceInitialize
                        new ServiceCollection()
                        .AddSingleton<IAppDispatcher>(dispatcher)
                        .AddSingleton<IErrorHandlerService>(error)
+                       .AddSingleton<UriImagePlaceholderViewModel>()
+                       .AddSingleton<IncreasingBoxHeightViewModel>()
                        .BuildServiceProvider()
         );
     }
