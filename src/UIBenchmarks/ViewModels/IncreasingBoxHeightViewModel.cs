@@ -12,7 +12,10 @@ public class IncreasingBoxHeightViewModel : BaseViewModel
     public IncreasingBoxHeightViewModel(IServiceProvider services)
         : base(services)
     {
-        for(var i = 0; i < 1000; ++i)
+        // Size of 0 Breaks iOS/Catalyst MAUI
+        // Switch to 1 for it to "work"
+        // It also doesn't seem to like a ton of items in the list.
+        for(var i = 0; i < 100; ++i)
         {
             this.Boxes.Add(new BoxSize() { Height = i });
         }
