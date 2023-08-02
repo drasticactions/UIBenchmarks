@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:UIBenchmarks.MauiUI"
+             x:Class="UIBenchmarks.MauiUI.ImagesGalleryListPage">
+    <ContentPage.Content>
+        <ListView HasUnevenRows="True" CachingStrategy="RecycleElement" ItemsSource="{Binding Images}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <local:ImagesGalleryContentView Images="{Binding .}"></local:ImagesGalleryContentView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

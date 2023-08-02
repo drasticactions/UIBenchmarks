@@ -20,6 +20,8 @@ public static class ServiceInitialize
                        .AddSingleton<IErrorHandlerService>(error)
                        .AddSingleton<UriImagePlaceholderViewModel>()
                        .AddSingleton<IncreasingBoxHeightViewModel>()
+                       .AddSingleton<ImageGalleryViewModel>()
+                       .AddSingleton<SocialMediaViewModel>()
                        .BuildServiceProvider()
         );
     }

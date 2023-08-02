@@ -8,6 +8,7 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new CollectionIncreaseBoxSizePage();
+		//MainPage = new VirtualListViewIncreaseBoxSizePage(provider);
+		MainPage = new SocialMediaListPage();
 	}
 }

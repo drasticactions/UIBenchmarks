@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UIBenchmarks.MauiUI.ListIncreaseBoxSizePage"
              Title="ListIncreaseBoxSizePage">
-    <ListView x:Name="TestListView" HasUnevenRows="True" ItemsSource="{Binding Boxes}">
+    <ListView x:Name="TestListView" HasUnevenRows="True" CachingStrategy="RecycleElement" ItemsSource="{Binding Boxes}">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>

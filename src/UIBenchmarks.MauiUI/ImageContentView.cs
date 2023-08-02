@@ -34,7 +34,7 @@ public class ImageContentView : ContentView
         }
 
         var image = new Image() { WidthRequest = this.WidthRequest, HeightRequest = this.HeightRequest };
-        image.Source = new UriImageSource() { Uri = uri, CachingEnabled = true };
+        image.Source = new UriImageSource() { Uri = uri, CachingEnabled = false };
         this.Content = image;
     }
 }

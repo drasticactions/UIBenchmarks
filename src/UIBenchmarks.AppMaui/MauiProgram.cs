@@ -18,16 +18,18 @@ public static class MauiProgram
 			Services.
 			AddSingleton<IAppDispatcher>(mauiAppDispatcher).
 			AddSingleton<IErrorHandlerService>(basicErrorHandler)
+			.AddSingleton<VirtualListViewModel>()
 			;
 
 		ServiceInitialize.Setup(mauiAppDispatcher, basicErrorHandler);
 
 		builder
 			.UseMauiApp<App>()
+			.UseVirtualListView()
 			.ConfigureFonts(fonts =>
 			{
-				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+				// fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+				// fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
 #if DEBUG

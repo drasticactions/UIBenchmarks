@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:UIBenchmarks.MauiUI"
+             x:Class="UIBenchmarks.MauiUI.SocialMediaListPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="PostTemplate">
+                <ViewCell>
+                    <Grid Margin="5,2,5,2" ColumnSpacing="5" ColumnDefinitions="60, *">
+                        <local:AvatarView Grid.Column="0" Embed="{Binding Post.Author.Avatar}"/>
+                        <local:PostContentView Grid.Column="1" Embed="{Binding .}"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="EmbedPostTemplate">
+                <ViewCell>
+                    <Grid Margin="5,2,5,2" ColumnSpacing="5" ColumnDefinitions="60, *">
+                        <local:AvatarView Grid.Column="0" Embed="{Binding Post.Author.Avatar}"/>
+                        <Grid Grid.Column="1"  RowDefinitions="Auto, Auto">
+                            <local:PostContentView Embed="{Binding .}"/>
+                            <Border Grid.Row="1"
+                                Stroke="{AppThemeBinding Light=Black, Dark=White}"
+                                    StrokeThickness="1"
+                                    Background="Transparent"
+                                    StrokeShape="RoundRectangle 5">
+                                <Grid Margin="5,2,5,2" ColumnSpacing="5" ColumnDefinitions="60, *">
+                                    <local:AvatarView Grid.Column="0" Embed="{Binding Post.Embed.Post.Author.Avatar}"/>
+                                    <local:PostContentView Grid.Column="1" Embed="{Binding Post.Embed.Post}"/>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="EmbedPostImageTemplate">
+                <ViewCell>
+                    <Grid Margin="5,2,5,2" ColumnSpacing="5" ColumnDefinitions="60, *">
+                        <local:AvatarView Grid.Column="0" Embed="{Binding Post.Author.Avatar}"/>
+                        <Grid Grid.Column="1"  RowDefinitions="Auto, Auto">
+                            <local:PostContentView Embed="{Binding .}"/>
+                            <Border Grid.Row="1"
+                                    Stroke="{AppThemeBinding Light=Black, Dark=White}"
+                                    StrokeThickness="1"
+                                    Background="Transparent"
+                                    StrokeShape="RoundRectangle 5">
+                                <Grid Margin="5,2,5,2" ColumnSpacing="5" ColumnDefinitions="60, *">
+                                    <local:AvatarView Grid.Column="0" Embed="{Binding Post.Embed.Post.Author.Avatar}"/>
+                                    <Grid Grid.Column="1"  RowDefinitions="Auto, Auto">
+                                        <local:PostContentView Embed="{Binding Post.Embed.Post}"/>
+                                        <local:ImagesGalleryContentView Grid.Row="1" Images="{Binding Post.Embed.Post.Embed}"/>
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="EmbedPostExternalTemplate">
+                <ViewCell>
+                    <Grid Margin="5,2,5,2" ColumnSpacing="5" ColumnDefinitions="60, *">
+                        <local:AvatarView Grid.Column="0" Embed="{Binding Post.Author.Avatar}"/>
+                        <Grid Grid.Column="1"  RowDefinitions="Auto, Auto">
+                            <local:PostContentView Embed="{Binding .}"/>
+                            <Border Grid.Row="1"
+                                    Stroke="{AppThemeBinding Light=Black, Dark=White}"
+                                    StrokeThickness="1"
+                                    Background="Transparent"
+                                    StrokeShape="RoundRectangle 5">
+                                <Grid Margin="5,2,5,2" ColumnSpacing="5" ColumnDefinitions="60, *">
+                                    <local:AvatarView Grid.Column="0" Embed="{Binding Post.Embed.Post.Author.Avatar}"/>
+                                    <Grid Grid.Column="1"  RowDefinitions="Auto, Auto">
+                                        <local:PostContentView Embed="{Binding Post.Embed.Post}"/>
+                                        <local:ExternalEmbedView Grid.Row="1" Embed="{Binding Post.Embed.Post.Embed}"/>
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="ImagePostTemplate">
+                <ViewCell>
+                    <Grid Margin="5,2,5,2" ColumnSpacing="5" ColumnDefinitions="60, *">
+                        <local:AvatarView Grid.Column="0" Embed="{Binding Post.Author.Avatar}"/>
+                        <Grid Grid.Column="1"  RowDefinitions="Auto, Auto">
+                            <local:PostContentView Embed="{Binding .}"/>
+                            <local:ImagesGalleryContentView Grid.Row="1" Images="{Binding Post.Embed}"/>
+                        </Grid>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="ExternalPostTemplate">
+                <ViewCell>
+                    <Grid Margin="5,2,5,2" ColumnSpacing="5" ColumnDefinitions="60, *">
+                        <local:AvatarView Grid.Column="0" Embed="{Binding Post.Author.Avatar}"/>
+                        <Grid Grid.Column="1"  RowDefinitions="Auto, Auto">
+                            <local:PostContentView Embed="{Binding .}"/>
+                            <local:ExternalEmbedView Grid.Row="1" Embed="{Binding Post.Embed}"/>
+                        </Grid>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+            <local:SocialMediaDataTemplateSelector
+                EmbedPostExternalTemplate="{StaticResource EmbedPostExternalTemplate}"
+                EmbedPostImageTemplate="{StaticResource EmbedPostImageTemplate}"
+                EmbedPostTemplate="{StaticResource EmbedPostTemplate}"
+                ExternalPostTemplate="{StaticResource ExternalPostTemplate}"
+                ImagePostTemplate="{StaticResource ImagePostTemplate}"
+                PostTemplate="{StaticResource PostTemplate}"
+                x:Key="SocialMediaDataTemplateSelector"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ListView ItemTemplate="{StaticResource SocialMediaDataTemplateSelector}" HasUnevenRows="True" CachingStrategy="RecycleElement" ItemsSource="{Binding Posts}">
+            <ListView.Behaviors>
+                <local:InfiniteScrollBehavior IsLoadingMore="{Binding IsBusy}" />
+            </ListView.Behaviors>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
